@@ -1,8 +1,7 @@
 package itacademy.view;
 
 import java.util.*;
-import itacademy.application.Video;
-import itacademy.domain.Usuari;
+import itacademy.domain.Video;
 
 public class Main {
 
@@ -26,10 +25,10 @@ public class Main {
             System.out.println("Dime los tags del video separados por comas:");
             tags = Arrays.asList(tagsInput.nextLine().split(","));
 
-            Video video = new Video(title, tags);
+            //Video video = new Video(title, tags);
 
-            String url = video.createVideo(title,tags);
-            System.out.println(url);
+            //String url = video.createVideo(title,tags);
+            //System.out.println(url);
         }
         else if (action == 2) {
 
