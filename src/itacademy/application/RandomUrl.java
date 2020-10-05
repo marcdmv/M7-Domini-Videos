@@ -1,4 +1,4 @@
-package itacademy;
+package itacademy.application;
 
 public class RandomUrl {
 

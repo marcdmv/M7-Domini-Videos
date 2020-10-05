@@ -1,10 +1,14 @@
-package itacademy;
+package itacademy.application;
 
 import java.util.*;
 
 public class Video {
+    protected String title;
+    protected List<String> tags;
 
-    public Video() {
+    public Video(String title, List<String> tags) {
+        this.title = title;
+        this.tags = tags;
     }
 
     public String createVideo(String title, List<String> tags) throws Exception{

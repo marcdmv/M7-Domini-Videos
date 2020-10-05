@@ -1,4 +1,4 @@
-package itacademy;
+package itacademy.domain;
 
 import java.util.*;
 
