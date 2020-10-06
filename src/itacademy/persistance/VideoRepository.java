@@ -6,10 +6,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class VideoRepository {
-    private static List<AbstractVideo> videos = new ArrayList<>();
+    private static final List<AbstractVideo> videos = new ArrayList<>();
 
     public VideoRepository(){
 
+    }
+
+    public List<AbstractVideo> getAllVideos(){
+        return new ArrayList<>(videos);
     }
 
     public void addVideo(AbstractVideo video) throws Exception {
