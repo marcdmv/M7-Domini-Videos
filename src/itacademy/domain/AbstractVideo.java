@@ -8,7 +8,7 @@ public abstract class AbstractVideo {
     public List<String> tags;
     public int userId;
     public String url;
-    int n = 10;
+    int n = 11;
 
     private static int COUNTER_VIDEOS = 1;
 
@@ -17,6 +17,8 @@ public abstract class AbstractVideo {
             throw new Exception("El título no puede estar vacío");
         if (tags.isEmpty())
             throw new Exception("Se requiere al menos un tag por video");
+        if (userId <= 0)
+            throw new Exception("No se ha recibido un id de usuario");
         this.title = title;
         this.tags = tags;
         id = COUNTER_VIDEOS;

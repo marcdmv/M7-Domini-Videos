@@ -11,7 +11,6 @@ public class VideosController {
     private final VideoRepository repository = new VideoRepository();
 
     public VideosController(){
-
     }
 
     public void createVideo(String title, List<String> tags, int userId) throws Exception {
@@ -26,12 +25,14 @@ public class VideosController {
                 throw new Exception("El título está vacío");
             if (av.tags.isEmpty())
                 throw new Exception("Se requiere al menos un tag por video");
-            allVideos = allVideos + "id: " + av.id + " | title: " + av.title + " | tags: " + av.tags + " | userId: " + av.userId + " | idUrl: " + av.url + "\n";
+            allVideos = allVideos + "id: " + av.id + " | title: " + av.title + " | tags: " + av.tags + " | userId: " + av.userId + " | idUrl: https://www.youtube.com/watch?v=" + av.url + "\n";
         }
         return allVideos;
     }
 
     public String getVideosByUserId(int userId) throws Exception {
+        if (userId <= 0)
+            throw new Exception("No has especificado una id de usuario correcta");
         String allVideosByUserId = new String();
         for (AbstractVideo avUserId : repository.getAllVideos()) {
             if (avUserId.title.equals(""))

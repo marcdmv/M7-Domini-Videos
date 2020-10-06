@@ -8,5 +8,4 @@ public class Video extends AbstractVideo {
         super(title, tags, userId);
 
     }
-
 }

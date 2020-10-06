@@ -6,5 +6,4 @@ public class User extends AbstractUser {
         super (name, surname, password);
 
     }
-
 }
